@@ -1,4 +1,3 @@
-```markdown
 # Azure Synapse Deployment with Terraform
 
 This repository contains Terraform scripts to deploy a complete Azure Synapse Analytics cluster along with candidate accounts. These accounts can be shared with candidates who will connect to the Synapse workspace and use the provided datasets to solve exercises.
@@ -25,16 +24,16 @@ Before you begin, ensure you have met the following requirements:
 
 1. Clone this repository to your local machine:
 
-    ```sh
-    git clone git@github.com:stumpyfr/de_pyspark_test.git
-    cd de_pyspark_test
-    ```
+```
+git clone git@github.com:stumpyfr/de_pyspark_test.git
+cd de_pyspark_test
+```
 
 2. Initialize Terraform:
 
-    ```sh
-    terraform init
-    ```
+```
+terraform init
+```
 
 ## Usage
 
@@ -42,20 +41,20 @@ Before you begin, ensure you have met the following requirements:
 
 Before deploying the infrastructure, you need to configure the variables. Create a `terraform.tfvars` file in the root directory and populate it with your Azure details and Synapse configuration:
 
-    ```hcl
-    env="" # the environment name, used to generate resource names
-    location="" # the Azure region where the resources will be deployed
-    owner_uuid="" # your Azure AD object ID
-    tld="" # your domain name, used to generate candidate email addresses
-    ```
+```
+env="" # the environment name, used to generate resource names
+location="" # the Azure region where the resources will be deployed
+owner_uuid="" # your Azure AD object ID
+tld="" # your domain name, used to generate candidate email addresses
+```
 
 ### Deployment
 
 To deploy the Azure Synapse cluster and candidate accounts, run the following command:
 
-    ```sh
-    terraform apply
-    ```
+```
+terraform apply
+```
 
 Review the planned changes and confirm the deployment by typing `yes`.
 
